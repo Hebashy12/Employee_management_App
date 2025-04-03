@@ -1,0 +1,119 @@
+@if(isOpened()){
+<div class="card-body p-4">
+  <div class="action date-controller mb-2" style="direction: rtl;">
+    <button ng-disabled="filterByDate.$invalid" ng-model="applyFilter" ng-click="runFilter=true" class="btn btn-danger"
+      (click)="close()">X</button>
+  </div>
+  <form role="form" class="row">
+    <div class="form-group col-lg-4">
+      <label class="form-control-label" for="form-group-input">Name</label>
+      <input type="text" class="form-control" id="form-group-input" name="name" [(ngModel)]="employeeObj.empName">
+    </div>
+    <div class="form-group col-lg-4">
+      <label class="form-control-label" for="form-group-input">Email</label>
+      <input type="text" class="form-control" id="form-group-input" name="email" [(ngModel)]="employeeObj.email">
+    </div>
+    <div class="form-group col-lg-4">
+      <!-- <p>{{employeeObj.email}}</p> -->
+      <label class="form-control-label" for="form-group-input">Contact Number</label>
+      <input type="number" class="form-control" id="contact" name="contact" [(ngModel)]="employeeObj.contactNum">
+    </div>
+    <div class="form-group col-lg-4">
+      <label class="form-control-label" for="form-group-input">Password</label>
+      <input type="password" class="form-control" id="Password" name="Password" [(ngModel)]="employeeObj.password">
+    </div>
+    <div class="form-group col-lg-4">
+      <!-- <h1>{{deptId}}</h1> -->
+      <label class="form-control-label" for="form-group-input">Department</label>
+      <select class="form-control" name="deptId" id="deptId" [(ngModel)]="employeeObj.deptId">
+        <option value="0" selected>Choise Department</option>
+        @for (dept of deptList; track dept.deptId){
+        <option [value]="dept.deptId">{{dept.deptName}}</option>
+        }
+      </select>
+    </div>
+    <div class="form-group col-lg-4">
+      <label class="form-control-label" for="gender">Gender</label>
+      <select class="form-control" name="gender" id="gender" [(ngModel)]="employeeObj.gender">
+        <option value="male" selected>Male</option>
+
+        <option value="female">Female</option>
+
+      </select>
+    </div>
+    <!-- <div class="form-group col-lg-12">
+      <label class="form-control-label" for="form-group-input">Notes</label>
+      <textarea class="form-control" id="form-group-input" name="notes" rows="6"></textarea>
+    </div> -->
+    <div class="form-group col-lg-12 ">
+      @if(employeeObj.id==""){
+      <button class="btn btn-warning float-end mt-2" for="form-group-input" (click)="onSaveEmp()">Save</button>
+      }@else{
+      <button class="btn btn-success float-end mt-2" for="form-group-input" (click)="onUpdateEmp()">Update</button>
+
+      }
+    </div>
+  </form>
+</div>
+}
+
+
+<div ng-app="employeeList" class="employee-table body">
+  <div ng-controller="EmployeeController as employee">
+    <!-- end of date controls form -->
+
+
+
+    <div class="heading row">
+      <div class="columns col-name">No</div>
+      <div class="columns col-name">Name</div>
+      <div class="columns col-email">Email</div>
+      <div class="columns col-phone">Phone #</div>
+      <div class="columns col-joined">DeptId</div>
+      <div class="columns col-joined">Gender</div>
+      <div class="columns col-joined">Role</div>
+      <div class="columns col-joined">Join Date</div>
+    </div>
+    <!-- end of heading row-->
+    @for(emp of empList; track emp.id){
+    <div ng-repeat="person in people | orderBy:lastNameSorter" class="row"
+      ng-hide="runFilter && joinedDateFilter(joinedUnix(person),startDate,endDate)">
+      <div class="columns col-name">
+        {{$index+1}}
+      </div>
+      <div class="columns col-name">
+        {{emp.empName}}
+      </div>
+      <div class="columns col-email">
+        {{emp.email}}
+      </div>
+      <div class="columns col-phone">
+        {{emp.contactNum }}
+      </div>
+      <div class="columns col-phone">
+        {{emp.deptId}}
+      </div>
+      <div class="columns col-phone">
+        {{emp.gender}}
+      </div>
+      <div class="columns col-phone">
+        {{emp.rol}}
+      </div>
+      <div class="columns col-joined">
+        {{emp.cratedDate | date:'mediumDate'}}
+      </div>
+      <div> <!--class="columns col-joined"-->
+        <button class="btn btn-success btn-sm m-1" (click)="edit(emp)">Edit</button>
+        <button class="btn btn-danger btn-sm" (click)="delete(emp.id)">Delete</button>
+      </div>
+    </div>
+    }
+    <!-- end of ng-repeat row -->
+  </div>
+  <div class="action date-controller mt-5">
+    <button ng-disabled="filterByDate.$invalid" ng-model="applyFilter" ng-click="runFilter=true" class="btn btn-primary"
+      (click)="addNew()">Add
+      Employee</button>
+  </div>
+  <!-- end of ng-controller -->
+</div>

@@ -1,0 +1,104 @@
+.body {
+  font-size: 13px;
+  padding: 22px 42px;
+}
+
+.body h2 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.body .employee-table {
+  display: table;
+}
+/* form related styles */
+
+.body .start-end-dates {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.body .date-controller {
+  float: left;
+}
+
+.body .start-date {
+  margin-right: 10px;
+}
+
+.body .end-date {
+  margin-right: 6px;
+}
+
+.body form input,
+button {
+  height: 28px;
+}
+
+.body .datepicker {
+  width: 140px;
+  border: 1px solid #CCC;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.body .ng-dirty input.ng-invalid {
+  border: 1px solid #B20000;
+}
+
+.body .ng-dirty input.ng-valid {
+  border: 1px solid #00B233;
+}
+
+.body button:focus {
+  outline: none;
+}
+
+/* .body button {
+  margin-top: 20px;
+  border: 1px solid #DDD;
+  background-color: #EFEFEF;
+  color: #CCC;
+  font-weight: bold;
+  width: 71px;
+} */
+ .btn{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.ng-valid button {
+  border: 1px solid #1f60ac;
+  background-color: #4a90e2;
+  color: #FFF;
+}
+/* listing/table styles */
+
+.heading {
+  font-weight: bold;
+}
+
+.body .row {
+  display: table-row;
+}
+
+.columns {
+  display: table-cell;
+  width: 140px;
+  padding: 8px 0;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.body .col-email,
+.col-phone {
+  width: 170px;
+}
+.body .header{
+  font-weight: bolder;
+  font-size: larger;
+  border: 1px solid #ccc;
+  background-color: #EFEFEF;
+  width: 100%;
+  padding: 50px;
+  border-radius: 10px;
+}
