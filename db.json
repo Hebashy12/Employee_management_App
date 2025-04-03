@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "test@gmail.com",
+      "password": "password123",
+      "role": "admin"
+    }
+  ],
+  "department": [
+    {
+      "deptId": "1",
+      "deptName": "Development",
+      "id": "b785"
+    },
+    {
+      "deptId": "2",
+      "deptName": "Graphic Designers",
+      "id": "457b"
+    }
+  ],
+  "employee": [
+    {
+      "id": "a32c6f71-2543-4dde-ab55-c83d8c232e82",
+      "empName": "Ahmed",
+      "contactNum": 11111411111,
+      "email": "Ahmed@gmail.com",
+      "deptId": "2",
+      "password": "1234",
+      "gender": "male",
+      "rol": "Employee",
+      "cratedDate": "2025-04-01T18:03:47.474Z"
+    },
+    {
+      "id": "945a8c21-89c3-4a85-9e6d-b952a2a2e82f",
+      "empName": "Ali",
+      "contactNum": 12111111111,
+      "email": "Ali@gmail.com",
+      "deptId": "1",
+      "password": "1234",
+      "gender": "male",
+      "rol": "Employee",
+      "cratedDate": "2025-04-01T18:04:29.643Z"
+    }
+  ],
+  "project": [
+    {
+      "id": "14121111-9aeb-4b2f-ae50-e6d1740cb5e8",
+      "projectName": "test2",
+      "clientName": "ahmed@ahmed.am",
+      "startDate": "2025-04-23",
+      "leadByEmoId": "a32c6f71-2543-4dde-ab55-c83d8c232e82",
+      "contactPerson": "gggg",
+      "contactNo": 55555,
+      "email": "ahmed@ahmed.am"
+    },
+    {
+      "id": "c5592e3f-67ce-4b6b-bd04-a896c11d16d5",
+      "projectName": "test@gmail.com",
+      "clientName": "test@gmail.com",
+      "startDate": "",
+      "leadByEmoId": "",
+      "contactPerson": "",
+      "contactNo": "",
+      "email": "test@gmail.com"
+    }
+  ],
+  "projectEmployee": [
+    {
+      "id": "5d9ee18b-8e5d-462f-8b5e-73f4d1656a30",
+      "projectId": "14121111-9aeb-4b2f-ae50-e6d1740cb5e8",
+      "empId": "a32c6f71-2543-4dde-ab55-c83d8c232e82",
+      "assignedDate": "2025-04-28",
+      "role": "UI/UX",
+      "projectName": "test2",
+      "isActive": true,
+      "empName": "Ahmed"
+    }
+  ]
+}
