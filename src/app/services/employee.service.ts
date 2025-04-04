@@ -10,6 +10,8 @@ export class EmployeeService {
   private apiUrl="http://localhost:3000/employee";
   constructor(private http:HttpClient) { }
   addEmployee(user: Employee): Observable<any> {
+
+    this.http.post("http://localhost:3000/users",{id:user.id, email:user.email, password:user.password, role:user.rol}).subscribe();
     return this.http.post(this.apiUrl, user);
   }
   editEmployee(emp: Employee): Observable<any> {

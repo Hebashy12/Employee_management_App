@@ -102,18 +102,22 @@
       <div class="columns col-joined">
         {{emp.cratedDate | date:'mediumDate'}}
       </div>
+      @if(isAdmin()){
       <div> <!--class="columns col-joined"-->
         <button class="btn btn-success btn-sm m-1" (click)="edit(emp)">Edit</button>
         <button class="btn btn-danger btn-sm" (click)="delete(emp.id)">Delete</button>
       </div>
+      }
     </div>
     }
     <!-- end of ng-repeat row -->
   </div>
-  <div class="action date-controller mt-5">
+
+  <div class="action date-controller mt-5" *ngIf="userRole === 'admin'">
     <button ng-disabled="filterByDate.$invalid" ng-model="applyFilter" ng-click="runFilter=true" class="btn btn-primary"
       (click)="addNew()">Add
       Employee</button>
   </div>
+
   <!-- end of ng-controller -->
 </div>

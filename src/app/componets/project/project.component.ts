@@ -10,6 +10,7 @@ import { Iproject } from '../../model/iproject';
 import { IprojectEmployee } from '../../model/iproject-employee';
 import { ProjectEmployeeService } from '../../services/project-employee.service';
 import { switchMap } from 'rxjs';
+import { AuthServiceService } from '../../services/auth-service.service';
 
 @Component({
   selector: 'app-project',
@@ -38,6 +39,8 @@ export class ProjectComponent implements OnInit {
   projectForm:FormGroup=new FormGroup({});
   empObser$:Observable<Employee[]>=new Observable<Employee[]>();
   projectList:Iproject[]=[];
+  userRole:string="";
+  authSer=inject(AuthServiceService);
 
   constructor(){
     this.empObser$=this.empSrv.getEmployees();
@@ -60,6 +63,10 @@ export class ProjectComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getProduct();
+    this.userRole=this.authSer.getUserRole();
+  }
+  isAdmin(){
+    return this.userRole=="admin";
   }
   initForm(project?:Iproject){
     this.projectForm=new FormGroup({

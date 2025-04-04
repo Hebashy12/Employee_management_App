@@ -44,7 +44,7 @@
       <div class="columns col-joined">
         {{proj.startDate }}
       </div>
-      <div> <!--class="columns col-joined"-->
+      <div *ngIf="isAdmin()"> <!--class="columns col-joined"-->
         <button class="btn btn-success btn-sm m-1" (click)="edit(proj)">Edit</button>
         <button class="btn btn-primary" (click)="onAddEmp(proj.id,proj.projectName)">Employees</button>
         <!-- <button class="btn btn-danger btn-sm" (click)="delete(emp.id)">Delete</button> -->
@@ -53,7 +53,7 @@
     <!-- } -->
     <!-- end of ng-repeat row -->
   </div>
-  <div class="action date-controller mt-5">
+  <div class="action date-controller mt-5" *ngIf="isAdmin()">
     <button ng-disabled="filterByDate.$invalid" ng-model="applyFilter" ng-click="runFilter=true" class="btn btn-primary"
       (click)="currentView='form'">Add
       Project</button>

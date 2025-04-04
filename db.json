@@ -2,9 +2,15 @@
   "users": [
     {
       "id": "1",
-      "email": "test@gmail.com",
+      "email": "Admin",
       "password": "password123",
       "role": "admin"
+    },
+    {
+      "id": "cea80946-88a7-4426-aa14-ec6be4ad933a",
+      "email": "Mohamed@gmail.com",
+      "password": "123456",
+      "role": "Employee"
     }
   ],
   "department": [
@@ -41,6 +47,17 @@
       "gender": "male",
       "rol": "Employee",
       "cratedDate": "2025-04-01T18:04:29.643Z"
+    },
+    {
+      "id": "cea80946-88a7-4426-aa14-ec6be4ad933a",
+      "empName": "Mohamed",
+      "contactNum": 6577838833,
+      "email": "Mohamed@gmail.com",
+      "deptId": "1",
+      "password": "123456",
+      "gender": "male",
+      "rol": "Employee",
+      "cratedDate": "2025-04-04T17:19:21.240Z"
     }
   ],
   "project": [

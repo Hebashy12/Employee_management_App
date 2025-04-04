@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { Employee} from '../../model/employee';
 import { EmployeeService } from '../../services/employee.service';
 import {v4 as id} from 'uuid';
+import { AuthServiceService } from '../../services/auth-service.service';
 
 @Component({
   selector: 'app-employee',
@@ -20,10 +21,16 @@ export class EmployeeComponent implements OnInit {
   employeeObj:Employee=new Employee();
   empService=inject(EmployeeService);
   empList:Employee[]=[];
-  isOpened=signal<boolean>(false)
+  isOpened=signal<boolean>(false);
+  userRole: string = '';
+  authser = inject(AuthServiceService);
   ngOnInit(): void {
     this.getDeptList();
     this.getEmpList();
+    this.userRole = this.authser.getUserRole();
+  }
+  isAdmin(){
+    return this.userRole==='admin';
   }
   getDeptList():void{
     // debugger;
