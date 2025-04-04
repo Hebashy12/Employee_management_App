@@ -21,17 +21,6 @@
   ],
   "employee": [
     {
-      "id": "a32c6f71-2543-4dde-ab55-c83d8c232e82",
-      "empName": "Ahmed",
-      "contactNum": 11111411111,
-      "email": "Ahmed@gmail.com",
-      "deptId": "2",
-      "password": "1234",
-      "gender": "male",
-      "rol": "Employee",
-      "cratedDate": "2025-04-01T18:03:47.474Z"
-    },
-    {
       "id": "945a8c21-89c3-4a85-9e6d-b952a2a2e82f",
       "empName": "Ali",
       "contactNum": 12111111111,
