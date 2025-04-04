@@ -56,12 +56,12 @@
     },
     {
       "id": "c5592e3f-67ce-4b6b-bd04-a896c11d16d5",
-      "projectName": "test@gmail.com",
-      "clientName": "test@gmail.com",
-      "startDate": "",
-      "leadByEmoId": "",
-      "contactPerson": "",
-      "contactNo": "",
+      "projectName": "E-commerce App",
+      "clientName": "Fady",
+      "startDate": "2025-04-16",
+      "leadByEmoId": "a32c6f71-2543-4dde-ab55-c83d8c232e82",
+      "contactPerson": "Nader",
+      "contactNo": 398686954,
       "email": "test@gmail.com"
     }
   ],
@@ -75,6 +75,36 @@
       "projectName": "test2",
       "isActive": true,
       "empName": "Ahmed"
+    },
+    {
+      "id": "d3d788eb-550e-4c76-9611-f92c2e3e8aa5",
+      "projectId": "14121111-9aeb-4b2f-ae50-e6d1740cb5e8",
+      "empId": "945a8c21-89c3-4a85-9e6d-b952a2a2e82f",
+      "assignedDate": "2025-04-21",
+      "role": "Back-end",
+      "projectName": "test2",
+      "isActive": true,
+      "empName": "Ali"
+    },
+    {
+      "id": "d3d788eb-550e-4c76-9611-f92c2e3e8aa5",
+      "projectId": "c5592e3f-67ce-4b6b-bd04-a896c11d16d5",
+      "empId": "a32c6f71-2543-4dde-ab55-c83d8c232e82",
+      "assignedDate": "2025-04-14",
+      "role": "Back-end",
+      "projectName": "E-commerce App",
+      "isActive": true,
+      "empName": "Ahmed"
+    },
+    {
+      "id": "d3d788eb-550e-4c76-9611-f92c2e3e8aa5",
+      "projectId": "c5592e3f-67ce-4b6b-bd04-a896c11d16d5",
+      "empId": "945a8c21-89c3-4a85-9e6d-b952a2a2e82f",
+      "assignedDate": "2025-04-16",
+      "role": "Front-end",
+      "projectName": "E-commerce App",
+      "isActive": true,
+      "empName": "Ali"
     }
   ]
 }

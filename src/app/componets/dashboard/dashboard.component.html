@@ -1,1 +1,38 @@
-<p>dashboard works!</p>
+<div class="container row">
+  <div class="card m-4 col-6" style="width: 45%;">
+    <img src="images/emp.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Our Team</h5>
+      <p class="card-text">Our team is a dedicated group of passionate professionals who bring energy, creativity, and a
+        strong sense of responsibility to everything they do. Each member plays a vital role, working together with
+        trust and collaboration to achieve our goals and deliver exceptional results. Their commitment and teamwork are
+        the driving force behind our success
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Number of Employees: {{empList.length}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="/employee" class="card-link">Display and add New</a>
+    </div>
+  </div>
+  <div class="card m-4 col-6" style="width: 45%;">
+    <img src="images/proj.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Projects</h5>
+      <p class="card-text">Our company works on a diverse range of projects across multiple fields including web
+        development, software solutions, and digital transformation. From building user-friendly e-commerce platforms
+        and custom management systems to creating powerful backend APIs and interactive dashboards, our team tackles
+        each project with innovation and precision. We’ve contributed to sectors like education, healthcare, retail, and
+        enterprise automation — always focused on delivering smart, scalable, and impactful solutions tailored to our
+        clients’ needs.
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Number of Project: {{projectList.length}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="/project" class="card-link">Display and add New</a>
+    </div>
+  </div>
+</div>

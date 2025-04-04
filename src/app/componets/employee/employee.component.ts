@@ -67,6 +67,7 @@ export class EmployeeComponent implements OnInit {
   }
   edit(emp:Employee){
     this.employeeObj=emp;
+    this.isOpened.set(true)
   }
   onUpdateEmp(){
     this.empService.editEmployee(this.employeeObj).subscribe(response=>{

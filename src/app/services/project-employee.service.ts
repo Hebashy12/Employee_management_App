@@ -15,4 +15,7 @@ export class ProjectEmployeeService {
   getProjectEmployees(projectId: string): Observable<IprojectEmployee[]> {
     return this.http.get<IprojectEmployee[]>(`${this.apiUrl}?projectId=${projectId}`);
   }
+  getAllProjectEmp():Observable<IprojectEmployee[]>{
+    return this.http.get<IprojectEmployee[]>(this.apiUrl);
+  }
 }
